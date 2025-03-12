@@ -1,5 +1,6 @@
 ## Fork and Clone directory
 - Make sure you clone it to your ocean folder.
+- Make sure you `cd` into your forked repository
 You should know how to do this now! `Woohoo`
 
 ## Install MultiQC
@@ -23,6 +24,7 @@ source ~/.bashrc
 Use multiqc --help again to test the software
 
 ## Install QIIME2
+
 1. Load anaconda
 ```
 module load anaconda3
@@ -31,30 +33,56 @@ module load anaconda3
 ```
 conda deactivate
 ```
-3. Just in case you have an environment, remove it first
-```
-conda remove --name qiime2-amplicon-2024.2 --all
-```
-4. Download installer
+3. Check that you do not have any environments installed
+  ```
+  conda env list
+  ```
+  - If you do not have any Conda environments created, you will likely see:
+    - `base                  *  /opt/packages/anaconda3-2024.10-1'
+  → Continue to Step 5.
+  - If you do have an existing environment, you will see:
+    - `qiime2-amplicon-2024.2     /jet/home/your-username/.conda/envs/qiime2-amplicon-2024.2`
+    - `base                  *  /opt/packages/anaconda3-2024.10-1`
+   → Skip to Step 7. 
+5. Download installer
 ```
 wget wget https://data.qiime2.org/distro/amplicon/qiime2-amplicon-2024.2-py38-linux-conda.yml
 ```
-5. Create an environment
+6. Create an environment (This step may take a few minutes. It is important to wait until the installation finishes.)
 ```
 conda env create -n qiime2-amplicon-2024.2 --file qiime2-amplicon-2024.2-py38-linux-conda.yml
 ```
-6. Once we’ve made it, we can activate this new environment:
-
+7. Once we’ve made it, we can activate this new environment:
 ```
 conda activate qiime2-amplicon-2024.2
 ```
-7. And now we can remove the file that we used to install it:
+8. And now we can remove the file that we used to install it:
 ```
 rm qiime2-amplicon-2024.2-py38-linux-conda.yml
 ```
 
+**(OPTIONAL) Troubleshooting: If QIIME2 Does Not Work**
+If QIIME2 does not work, there may be a Conda environment conflict.
+
+a. Check for Incomplete Installations
+```
+ls -l /jet/home/iliebler/.conda/envs/
+```
+If you see an incomplete QIIME2 installation, proceed to the next step.
+b. Manually delete those installations
+```
+rm -rf /jet/home/iliebler/.conda/envs/qiime2-amplicon-2024.2
+```
+c. Clean Up Conda Cache
+```
+conda clean --all
+```
+d. Reinstall QIIME2
+Repeat Steps 5–8 to reinstall QIIME2.
 
 # Organize repository into folders
+- Make sure your current directory `pwd` is
+/ocean/projects/agr250001/your-username/week-7-repository
 1. Create a folder `raw-data` by using the `mkdir` command
 ```
 mkdir mock-data

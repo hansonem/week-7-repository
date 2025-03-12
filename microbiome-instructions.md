@@ -20,6 +20,7 @@ IF YOU ARE STILL HAVING ISSUES, TRY THE FOLLOWING
 echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
 ```
+Use multiqc --help again to test the software
 
 ## Install QIIME2
 1. Load anaconda

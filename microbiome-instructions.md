@@ -27,13 +27,13 @@ Use multiqc --help again to test the software
 ```
 module load anaconda3
 ```
-2. Just in case you have an environment, remove it first
-```
-conda env remove -n qiime2-amplicon-2024.2
-```
-3. Just in case you have an activated conda environment:
+2. Just in case you have an activated conda environment:
 ```
 conda deactivate
+```
+3. Just in case you have an environment, remove it first
+```
+conda remove --name qiime2-amplicon-2024.2 --all
 ```
 4. Download installer
 ```

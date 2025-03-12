@@ -15,7 +15,7 @@ python3 -m pip install --user multiqc
 
 - Use `multiqc --help` to test the software
 
-IF YOU ARE STILL HAVING ISSUES, TRY THE FOLLOWING
+**IF YOU ARE STILL HAVING ISSUES, TRY THE FOLLOWING**
 ```
 echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc

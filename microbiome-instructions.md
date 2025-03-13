@@ -16,7 +16,7 @@ python3 -m pip install --user multiqc
 echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
 ```
-Use multiqc --help again to test the software
+Use `multiqc --help` to test the software
 
 ## Install QIIME2
 

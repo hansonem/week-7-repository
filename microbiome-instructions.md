@@ -12,7 +12,9 @@ python3 -m pip install --upgrade --user pip
 ```
 python3 -m pip install --user multiqc
 ```
-
+```
+export PATH=$HOME/.local/bin:$PATH
+```
 
 - Use `multiqc --help` to test the software
 
